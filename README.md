@@ -1,3 +1,6 @@
+# NOTICE
+THIS IS A FORK OF THE WONDERFUL REPOSITORY: https://github.com/amwalding/wireshark_profiles and other Open Source profiles. However it does not contain ICS/OT specific Wireshark profiles, which I'm creating when the need arises for me. The reason for the fork is to organise it easiliy for myself.
+
 ![Visitor Count](https://profile-counter.glitch.me/amwalding1/count.svg)
 # Wireshark Profiles Repository
 Welcome to all my Fellow Packet Analysts/Sniffers, Network Troubleshooters, and Wireshark geeks!
@@ -43,3 +46,8 @@ Did I just save you time and $$$?  I certainly hope so.
 Return the favor - buy me a coffee: https://www.buymeacoffee.com/awalding  or become a patron: https://www.patreon.com/bePatron?u=22427713&redirect_uri=https%3A%2F%2Fwww.cellstream.com%2Fcomponent%2Ftags%2Ftag%2Fwireshark&utm_medium=widget
 
 Thanks for supporting my work.
+
+# Credits
+- https://github.com/amwalding/wireshark_profiles
+- https://www.cellstream.com/wireshark-profiles-repository/
+- @DhaeyerWolf
