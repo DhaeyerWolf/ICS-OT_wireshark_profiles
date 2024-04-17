@@ -35,3 +35,15 @@ Create a pull request with a ZIP file containing your profile. If possible creat
 - https://github.com/amwalding/wireshark_profiles
 - https://www.cellstream.com/wireshark-profiles-repository/
 - @DhaeyerWolf
+
+# Protocols
+Following is a list of the protocols I want to create wireshark profiles for. Some of them may already be implemented, others are still in a "WIP" phase.
+- S7Comm
+- Profinet
+- Modbus TCP
+- OPC-UA
+- BACnet
+- Ethernet/IP
+	- Common Industrial Protocol (CIP™)
+- DNP3
+- MQTT
