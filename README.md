@@ -42,7 +42,7 @@ The following is a list of the protocols I want to create Wireshark profiles for
 - [x] Profinet
 - [x] Modbus TCP/UDP
 - [x] OPC-UA
-- [ ] BACnet
+- [x] BACnet
 - [x] Ethernet/IP: Common Industrial Protocol (CIP™)
 - [ ] DNP3
 - [ ] MQTT
