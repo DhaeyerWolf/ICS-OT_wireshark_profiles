@@ -47,17 +47,17 @@
 
 
 ## MSG types
-OPN - OpenSecureChannel message
-MSG - UA Secure Conversation Message
-HEL - Hello message
-ACK - Acknowledge message
-CLO - CloseSecureChannel message
+- OPN - OpenSecureChannel message
+- MSG - UA Secure Conversation Message
+- HEL - Hello message
+- ACK - Acknowledge message
+- CLO - CloseSecureChannel message
 
-**Typical flow of a conversation**
-Client HEL -> # hello message
-Server ACK <- # Acknowledge hello message
-Client OPN -> # request security poicy (?)
-Server OPN <- # confirms request
-Client MSG -> # requests opc.tcp server (uri)
-Server MSG <- # replies with information
-MSG repeat
+**Typical flow of a conversation:**
+- Client HEL -> # hello message
+- Server ACK <- # Acknowledge hello message
+- Client OPN -> # request security poicy (?)
+- Server OPN <- # confirms request
+- Client MSG -> # requests opc.tcp server (uri)
+- Server MSG <- # replies with information
+- MSG repeat
