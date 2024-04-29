@@ -44,5 +44,6 @@ The following is a list of the protocols I want to create Wireshark profiles for
 - [x] OPC-UA
 - [x] BACnet
 - [x] Ethernet/IP: Common Industrial Protocol (CIP™)
-- [ ] DNP3
+- [x] DNP3
 - [ ] MQTT
+- [ ] IEC 104
