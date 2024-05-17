@@ -18,6 +18,14 @@ plugins
     └── script1.lua
 ```
 
+# Plugins
+- `UMAS_dissector.lua`: Please be aware that this may break the normal Modbus traffic you see in wireshark to disable this you can either remove it from the plugins folder or rename the file to `UMAS_dissector.lua.off` (renaming the file is the recommended way). Credits: Erwan Cordier
+- `melsoft_dissector.lua`: A dissector to handle the traffic of the "Mitsubishi Electric MELSOFT" protocol used to communicate with Safety PLCs. Credits: Nozomi Networks - Andrea Palanca, Ivan Speziale
+- `CiscoNexus_dissector.lua`: Cisco Nexus Protocol Plug-in for Wireshark. Credits: Nozomi Networks - Younes Dragoni (@ydragoni)
+- `siemens_ruggedcom(RCDP)_dissector.lua`: Siemens Ruggedcom (RCDP) Protocol Plug-in for Wireshark. Credits: Nozomi Networks - Luca Cremona (linkedin: luca--cremona)
+
 # Credits
 - @DhaeyerWolf
 - https://github.com/biero-el-corridor/Wireshark-UMAS-Modicon-M340-protocol/blob/main/modbus-umas-schneider.lua
+- https://github.com/NozomiNetworks/blackhat23-melsoft
+- https://github.com/NozomiNetworks/dissectors
