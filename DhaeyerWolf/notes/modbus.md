@@ -2,6 +2,43 @@
 
 
 # UMAS
+## Protocol dissection
+
+### Overview
+The basic and normal structure of the protocol. Depending on the UMAS function code the data part can be split up even more.
+```
+[Modbus Data + Modbus code 90] | [1 byte - UMAS session/pairing key] | [1 byte - UMAS Function code] | [? bytes - Data]
+```
+From here on out, the modbus data is not displayed as the UMAS protocol is applied after the modbus data & modbus code 90.
+
+### PLC Program Upload (0x31)
+```
+[1 byte - UMAS session/pairing key] | [1 byte - UMAS Function code] | [2 bytes - 00 01 / 00 10] | [2 bytes - block ID - little Endian] | [2 bytes - block length - little Endian] | [? bytes - Data]
+```
+- the 3rd part of the protocol, is supposed to always be `00 01`, test however have showed that this can also be `00 10`. It is yet unclear what this means
+- The data should be the length fo the defined date in the previous part of the protocol. Everything more than this should be dropped (This has not been verified). 
+
+**Other Notes**
+- although it is yet unkown what exactly gets uploaded, it may be a `.stu` file or a `.apx` file.
+	- observation shows that the filepath to a `.stu` file is send in one packet (the 4th packet)
+	
+Online unofficial documentation discribes the following:
+```
+The upload (computer to PLC) process is quite tricky. The first blocks sent to the PLC must have a specific length:
+
+    Block 1 → 64 bytes (with the first 64 bytes of the APX file)
+    Block 2 → 264 bytes (with bytes 65 to 328 of the APX file)
+    Block 3 → 64 bytes (with bytes 329 to 373 of the APX file)
+    Block 4 → 1014 bytes (if possible)
+    Block 5 → 998 bytes (if possible)
+    Block 6 → 1008 bytes (if possible)
+    Block 7 → 1014 bytes (if possible)
+
+After the 7th block, all blocks are 1022 bytes long (if possible, it depends on negotiation performed during connection. Have a look to sections I and VI for more information). In blocks 4 to 7, if the max packet size is lower than 998, they will be sent with the max packet size. 
+```
+This is not the same as what I have observed; all my packets were 1012 bytes execpt for the last one (presumably because of the data cutoff)
+
+
 ## Function codes
 | Enabled | Protocol | Filter | Description |
 |---------|----------|--------|-------------|
