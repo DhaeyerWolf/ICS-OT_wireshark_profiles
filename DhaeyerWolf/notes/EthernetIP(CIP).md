@@ -35,7 +35,7 @@
 - **Instance:** An instance is a specific occurrence of a class. While a class defines the general characteristics and behaviors, an instance represents a particular object within that class. For example, if you have a class for analog input modules, each individual analog input module on the network would be an instance of that class. Instances are identified by instance IDs.
 - **Attribute:** Attributes are specific properties or data points associated with a class or instance. They represent the actual data that can be read or written, such as the current value of a sensor, configuration parameters, or status information. Each attribute is identified by an attribute ID.
 
-### Set Attribute Signle
+### Set Attribute Single
 | Field | value |
 | ----- | ----- |
 | Service Code | 0x10 |
@@ -153,3 +153,64 @@ MSG source length: Specify 8 bytes
 | Attribute | 0x0 |
 
 MSG source length: Specify 8 bytes 
+
+## Publication
+- [source](https://www.rockwellautomation.com/en-us/support/documentation/overview/publication-types.html)
+**Publication Types**
+Select a publication type to match your information needs.
+
+These are our most common publication types and the typical information you can find in each. To narrow your Literature Library search results, use the Publication Type filter to show only the publications most relevant to your information needs.
+
+**Features, Benefits, and Applications**
+
+- **Application Profile/Customer Success Story (AP)**
+  - Demonstrates how our products and services can optimize your industrial operations. Some describe how we helped a specific customer solve an application need.
+- **Brochure/Magazine (BR)**
+  - Features and benefits for a family of products, group of services, or industry. Best for finding overview information.
+- **Profile (PP)**
+  - Features and benefits for a single product or service. May include high-level specification and product catalog number information. Best for finding overview information.
+- **Sales Promotion (SP)**
+  - Includes infographics and eBooks. An infographic provides high-level information in a visual format. An eBook examines topics and challenges that companies may face when working with a specific application.
+- **White Paper (WP)**
+  - An objective overview or in-depth technical assessment that addresses an architecture, capability, or product technology.
+
+**Technical Specifications and Product Certifications**
+
+- **Certifications (CT)**
+  - Product certifications to help you verify that the ratings meet the needs of your application.
+- **Selection Guide (SG)**
+  - Selection steps and criteria to help you choose among different products to build a system.
+- **Technical Data (TD)**
+  - Complete specifications of a product family or platform.
+
+**Program**
+
+- **Application Technique (AT)**
+  - Programming techniques and configuration recommendations for a specific combination of products or a specific feature or function. Intended for the experienced user.
+- **Getting Results (GR)**
+  - Describes how to install, navigate, troubleshoot, and effectively use a software product. This publication supplements a comprehensive online help system.
+- **Programming Manual (PM)**
+  - Guides the developer on how to design, write, and test an application.
+
+**Install and Operate**
+
+- **Dimension Sheet (DS)**
+  - Shows product dimensions or mounting templates.
+- **Installation Instructions (IN)**
+  - Information on how to install, configure (if applicable), and troubleshoot a product.
+- **Quick Start (QS)**
+  - Basic, task-oriented information on how to install, configure, and operate a set of products or components.
+- **Reference Data (RD)**
+  - Descriptions of fault codes, alarm codes, parameters, or other highly structured data presented in a spreadsheet format to enable sort and filter capabilities.
+- **Reference Manual (RM)**
+  - Highly structured and detailed information on product designs, functions, ratings, instructions, or other application requirements. Intended for the experienced user.
+- **User Manual (UM)**
+  - Instructions for product configuration and use. Can also include installation and troubleshooting information.
+- **Wiring Diagram (WD)**
+  - Wiring diagrams and connection guidelines. Generally used when the product does not have Installation Instructions or User Manual.
+
+**Publication Number 101**
+
+Do you ever wonder what the characters in our publication numbers mean? These characters provide an at-a-glance view of the type of content in a publication.
+
+![Publication](https://web.archive.org/web/20240303223509im_/https://rockwellautomation.scene7.com/is/image/rockwellautomation/web-search-faq--ra_pub_infographic-1.1140.jpg)
