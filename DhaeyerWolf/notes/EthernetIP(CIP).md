@@ -1,11 +1,39 @@
 # Rockwell specific 
 - source: enet-at002_-en-p.pdf (Rockwell Automation Publication ENET-AT002E-EN-P - January 2023)
+- source: Various personal observations in pcaps
+
+## Terminology
+- Download: Send a program from Workstation to a PLC                  Workstation -> PLC
+- Upload: Grab a program from a PLC onto the Workstation              PLC -> Workstation
+
+## Wireshark notes
+| service code | Name                                       | notes                                                                                           |
+| ------------ | ------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+|     0x36     | unkown                                     | unkown                                                                                          |
+|     0x37     | I/O Force Activation request               | observetions showed enable I/O request; Force I/O request                                       |
+|     0x38     | unkown                                     | unkown                                                                                          |
+|     0x4C     | Read Tag                                   | not yet observed, but potentially used during program upload                                    |
+|     0x4D     | Write Tag                                  | Has been observed during program Download, add "enip.timeout == 1" to get only the requests     |
+|     0x4E     | Read Modify Write                          | Read Modify Write                                                                               |
+|     0x50     | unkown                                     | Unkown data that contains (port), configuration data                                            |
+|     0x52     | Read Tag Fragmented                        | Read Tag Fragmented                                                                             |
+|     0x53     | Write Tag Fragmented                       | Write Tag Fragmented                                                                            |
+|     0x54     | unkown                                     | Not yet encountered, however 0x53 & 0x55 exists so probably 0x54 as well                        |
+|     0x55     | Get Instance Attribute List                | Get Instance Attribute List                                                                     |
+
 
 ## Protocol structure
-- Service Code (cip.sc)
-- class
-- instance
-- attribute
+| Name         | Description                                                 | Wireshark filter |
+|--------------|-------------------------------------------------------------|------------------|
+| Service Code | Specifies the operation (e.g., read, write)                 | cip.sc           |
+| Class        | Identifies the group of objects targeted by the operation.  | cip.class        |
+| Instance     | Specifies the particular object within the class.           | cip.instance     |
+| Attribute    | Indicates the specific property or data point to be accessed or modified. | cip.attribute    |
+
+- **Service Code:** The service code is a part of the CIP message that specifies the type of operation to be performed. It defines the action that the client (e.g., a PLC or HMI) is requesting the server (e.g., a sensor or actuator) to execute. Common service codes include read, write, reset, start, stop, etc.
+- **Class:** In CIP, a class is a collection of objects that share common characteristics and behaviors. Each class represents a specific type of device or function within the network. For instance, there might be a class for analog input modules, another for digital output modules, and so on. Each class is identified by a unique class ID.
+- **Instance:** An instance is a specific occurrence of a class. While a class defines the general characteristics and behaviors, an instance represents a particular object within that class. For example, if you have a class for analog input modules, each individual analog input module on the network would be an instance of that class. Instances are identified by instance IDs.
+- **Attribute:** Attributes are specific properties or data points associated with a class or instance. They represent the actual data that can be read or written, such as the current value of a sensor, configuration parameters, or status information. Each attribute is identified by an attribute ID.
 
 ### Set Attribute Signle
 | Field | value |
