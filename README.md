@@ -23,13 +23,20 @@ root
     └── Profile4.zip
 ```
 
+# Downloading the Repository
+To ensure that submodule folders are included when downloading this repository, avoid using the "Download Zip" feature from GitHub, as it will result in empty submodule folders. Similarly, a standard "git clone" will not include these submodules. Instead, use the following command:
+
+```bash
+git clone --recurse-submodules https://github.com/DhaeyerWolf/ICS-OT_wireshark_profiles.git
+```
+
 # How to Use the Profiles
 1. Simply download the profile you want (they are all zipped).
-2. Then from your Wireshark GUI, right click on the lower right corner of the Wireshark GUI - in the Profile box.
-3. Then simply select: Import> from zip file, and pick the file from your downloads directory.  Now you can select the newly imported profile!!
+2. Then, from your Wireshark GUI, right-click in the lower-right corner of the Wireshark GUI - in the Profile box.
+3. Then, simply select: Import> from zip file, and pick the file from your downloads' directory.  Now you can select the newly imported profile!!
 
 # Plugins folder
-There it is possible that there is a "plugins" folder in some of the repositories. This contains plugins (e.g. additional dissectors) for wireshark. The files in this folder should be placed in the wireshark plugins folder
+There may be a “plugins” folder in some repositories. This contains plugins (e.g. additional dissectors) for Wireshark. The files in this folder should be placed in the Wireshark plugins folder
 
 On Windows:
 - For Wireshark portable: `[Install location]/App/Wireshark/plugins`. (for easy use you can just put the whole plugins folder in the `/App/Wireshark/` folder, it will automatically merge the plugins folder.
